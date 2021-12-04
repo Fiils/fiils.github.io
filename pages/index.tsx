@@ -7,6 +7,8 @@ import Image from 'next/image'
 import { SiNextdotjs, SiReact, SiJavascript, SiNodedotjs, SiTsnode, SiSass } from 'react-icons/si'
 import { RiArrowDownSLine } from 'react-icons/ri'
 import styles from '../styles/scss/Home.module.scss'
+import aboutStyles from '../styles/scss/Aboutme.module.scss'
+import techStyles from '../styles/scss/Techinfo.module.scss'
 
 const CanvasButtonBKG = dynamic(() => import('../components/CanvasButtonBKG'), { ssr: false })
 
@@ -27,8 +29,6 @@ const Home: NextPage = () => {
     setAllTech(!allTech)
   }
 
-  console.log(miButtonClick)
-
   return (
     <div>
       <Head>
@@ -38,7 +38,10 @@ const Home: NextPage = () => {
       </Head> 
      <nav className={`${styles.navbar} ${miButtonHover && !miButtonClick ? 'blurred' : ''}`}></nav>
 
-     <div className={`${styles.image} ${miButtonHover && !miButtonClick ? 'blurred' : ''}`}></div>
+     <div className={`${styles.image} ${miButtonHover && !miButtonClick ? 'blurred' : ''}`}>
+       <Link href="https://www.hanulmoaracunoroc.ro/html/pdf/Moara-cu-noroc-Ioan-Slavici.pdf"><a target="_blank"><button>Check out CV</button></a></Link>
+       <a href="/CV.pdf" download="CV"><button>Download CV as PDF</button></a>
+     </div>
 
      <div className={styles.more_info_section}>
        <div className={styles.mi_flex_button}>
@@ -50,14 +53,24 @@ const Home: NextPage = () => {
              scroll-behavior: smooth;
            }
            .blurred { 
-              filter: blur(2px);
-              backdrop-filter: opacity(0);
-              animation: blur 1s;
+              filter: blur(2px); 
+              animation: blur 0.5s;
            }
            @keyframes blur {
              from {filter: blur(0)}
              to {filter: blur(2px)}
            }
+           ::-webkit-scrollbar {
+            width: 5px;
+            }
+            ::-webkit-scrollbar-track {
+              background: white;
+            }
+            ::-webkit-scrollbar-thumb {
+              background-color: #b8c6db;
+              background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+              border-radius: 10px;
+            }
            `
           }</style>
        </div>
@@ -66,13 +79,13 @@ const Home: NextPage = () => {
      {miButtonClick && 
       <div className={styles.sec_content}>
 
-        <div className={styles.about_me}>
+        <div className={aboutStyles.about_me}>
           <figure>
-            <Image className={styles.item_am_2_image} src="https://res.cloudinary.com/media-cloud-dw/image/upload/v1638460198/Portfolio-Website/testpp_jijtxr.jpg"
+            <Image className={aboutStyles.item_am_2_image} src="https://res.cloudinary.com/media-cloud-dw/image/upload/v1638460198/Portfolio-Website/testpp_jijtxr.jpg"
                   width={300} height={300} />
             <figcaption>Ipatov Ioan Alexandru, 16</figcaption>
           </figure>
-          <p className={styles.item_am_2}>
+          <p className={aboutStyles.item_am_2}>
           “I am a very passionate person when it comes to programming, especially to web development. For many years my goal 
           has been to become a better and better web developer. It first started as a hobby, self-teaching myself, and since then, my will
            for learning everything there is about web-related stuff has only been growing. I now mainly”
@@ -82,21 +95,93 @@ const Home: NextPage = () => {
         <div className={styles.divider}></div>
 
         <div>
-          <div className={styles.spec_flex}>
+          <div className={techStyles.spec_flex}>
               <p>Over the course of many years I've managed to learn a vast variety of programming languages, libraries and technologies, covering both frotend
                 and backend developments. This way I was able to understand the logic of a website, while gathering a lot of technical
                 knowledge.
               </p>
-              <div className={styles.tech_logos}>
-                <SiNextdotjs  size={70} />
-                <SiReact size={70} />
-                <SiJavascript size={70} />
+              <div className={techStyles.tech_logos}>
+                {/* <SiNextdotjs  size={70} /> */}
+                <div className={techStyles.logo_img_wanim}>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.logo_content}></div>
+                </div>
+                <div className={techStyles.logo_img_wanim}>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.logo_content}></div>
+                </div>
+                <div className={techStyles.logo_img_wanim}>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.logo_content}></div>
+                </div>
+                <div className={techStyles.logo_img_wanim}>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.logo_content}></div>
+                </div>
+                <div className={techStyles.logo_img_wanim}>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.logo_content}></div>
+                </div>
+                <div className={techStyles.logo_img_wanim}>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.hover_point}></div>
+                  <div className={techStyles.logo_content}></div>
+                </div>
+                {/* <SiReact size={70} /> */}
+                {/* <SiJavascript size={70} />
                 <SiNodedotjs size={70} />
                 <SiTsnode size={70} />
-                <SiSass size={70} />
+                <SiSass size={70} /> */}
               </div>
           </div>
-          <div className={styles.all_tech}>
+          <div className={techStyles.all_tech}>
               <a href="#knd">
                 <button onClick={allTechnologiesClick}>
                   <RiArrowDownSLine size={30}/>
@@ -104,7 +189,7 @@ const Home: NextPage = () => {
               </a>
           </div>
           {allTech && 
-            <div id="knd" className={styles.list_all_tech}>
+            <div id="knd" className={`${techStyles.list_all_tech}`}>
               <ul>
                 <h3>Programing Languages:</h3>
                 <li>Javascript</li>

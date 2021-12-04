@@ -1,0 +1,210 @@
+.spec_flex {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: 1.2em;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10rem;
+
+    p {
+        font-size: 1.1em;
+        font-weight: 500;
+        width: 35%;
+    }
+
+    .tech_logos {
+        display: grid;
+        grid-column-start: auto;
+        grid-column-end: auto;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-template-columns: repeat(3, minmax(0, 2fr));
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1.5em;
+
+        &:hover {
+            transform: scale(1.15) rotateY(-10px);
+            transition: transform 0.3s;
+        }
+
+        @keyframes upped-persp {
+            from { top: 0 }
+            to { top: -30px }
+        }
+        
+        .logo_img_wanim {
+            position: relative;
+            max-width: 70px;
+            
+            &:hover{ 
+                top: -30px;
+                transform: scale(1.15);
+                transition: transform 1s;
+                animation: upped-persp 1s;
+            }
+        
+            .hover_point {
+                position: absolute;
+                z-index: 2;
+                width: calc(100% / 3);
+                height: calc(100% / 3);
+            }
+        
+            .logo_content {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-size: cover;
+                transition: .5s ease;
+                max-width: 70px !important;
+            }
+
+            @for $i from 1 through 9 {
+                .hover_point:nth-child(0n + #{$i}) {
+                    @if $i >= 3 and $i <= 6 {
+                        top: calc(100% / 3);
+                    }
+                    @else if $i >= 7 and $i <= 9 {
+                        top: calc(100% / 3 * 2);
+                    }
+                    @else {
+                        top: 0;
+                    }
+        
+                    @if $i == 2 or $i == 5 or $i == 8 {
+                        left: calc(100% / 3);
+                    }
+                    @else if $i == 3 or $i == 6 or $i == 9 {
+                        left: calc(100% / 3 * 2);
+                    }
+                    @else {
+                        left: 0;
+                    }
+                }
+            }
+
+            @mixin tilt($rx, $ry, $rz, $or1, $or2){
+                transform-origin: $or1 $or2;
+                transform: perspective(1000px) rotateX($rx) rotateY($ry) rotateZ($rz);
+            }
+
+            @for $i from 1 through 9 {
+                .hover_point:nth-child(0n + #{$i}):hover ~ .logo_content {
+                    @if $i == 1 {
+                        @include tilt(10deg, -10deg, 2deg, right, top)
+                    }
+                    @else if $i == 2 {
+                        @include tilt(10deg, 0deg, 0deg, center, top);
+                    }
+                    @else if $i == 3 {
+                        @include tilt(10deg, 10deg, -2deg, left, top);
+                    }
+                    @else if $i == 4 {
+                        @include tilt(0deg, -10deg, 0deg, left, center);
+                    }
+                    @else if $i == 5 {
+                        @include tilt(0deg, 0deg, 0deg, none, none);
+                    }
+                    @else if $i == 6 {
+                        @include tilt(0deg, 10deg, 0deg, right, center);
+                    }
+                    @else if $i == 7 {
+                        @include tilt(-10deg, -10deg, -2deg, right, bottom);
+                    }
+                    @else if $i == 8 {
+                        @include tilt(-10deg, 0deg, 0deg, center, bottom);
+                    }
+                    @else if $i == 9 {
+                        @include tilt(-10deg, 10deg, 2deg, left, bottom)
+                    }
+                }
+            }
+        }
+
+        @for $i from 1 through 6 {
+            .logo_img_wanim:nth-child(0n + #{$i}){
+                .logo_content {
+                    @if $i == 1 {
+                        background: url('https://res.cloudinary.com/media-cloud-dw/image/upload/c_scale,h_70,w_70/v1638647358/Portfolio-Website/Logos/nextdotjs_d6sepv.svg') no-repeat;
+                    }
+                    @else if $i == 2 {
+                        background: url('https://res.cloudinary.com/media-cloud-dw/image/upload/c_scale,h_70,w_70/v1638647403/Portfolio-Website/Logos/react_shptio.svg') no-repeat;
+                    }
+                    @else if $i == 3 {
+                        background: url('https://res.cloudinary.com/media-cloud-dw/image/upload/c_scale,h_70,w_70/v1638647413/Portfolio-Website/Logos/javascript_ypmbu8.svg') no-repeat;
+                    }
+                    @else if $i == 4 {
+                        background: url('https://res.cloudinary.com/media-cloud-dw/image/upload/c_scale,h_70,w_70/v1638647431/Portfolio-Website/Logos/nodedotjs_bcawk2.svg') no-repeat;
+                    }
+                    @else if $i == 5 {
+                        background: url('https://res.cloudinary.com/media-cloud-dw/image/upload/c_scale,h_70,w_70/v1638647441/Portfolio-Website/Logos/typescript_tju3np.svg') no-repeat;
+                    }
+                    @else if $i == 6 {
+                        background: url('https://res.cloudinary.com/media-cloud-dw/image/upload/c_scale,h_70,w_70/v1638647450/Portfolio-Website/Logos/sass_xr3r34.svg') no-repeat;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.all_tech {
+    margin-left: calc(50vw - 15px);
+
+    button {
+        border: none;
+        background-color: white;
+        cursor: pointer;
+    }
+}
+
+.list_all_tech {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    border-top: 1.5px rgb(170, 170, 170) solid; 
+    border-bottom: 1.5px rgb(170, 170, 170) solid; 
+    background-color: rgb(240, 240, 240);
+    cursor: default;
+    overflow: hidden;
+
+    ul {
+        list-style: none;
+    }
+
+    h3 {
+        margin: 0;
+    }
+
+    li {
+        text-indent: 10px;
+    }
+
+    li:hover {
+        transform: scale(1.15);
+        transition: transform 0.25s;
+    }
+
+    @for $i from 1 through 5 {
+        @for $j from 1 through 7 {
+            ul:nth-child(0n + #{$i}) {
+                li:nth-child(0n + #{$j}) {
+                    animation: fade-in-list 0.15s * $j * $i;
+                }
+            }
+        }
+    }
+
+    @keyframes fade-in-list {
+        from { opacity: 0; transform: scale(1.25); }
+        to { opacity: 1; tranform: scale(1); }
+    }
+}
+
+// .logo_anim:hover {
+//     margin-top: -30px;
+//     animation: upped-persp 1s;
+// }
