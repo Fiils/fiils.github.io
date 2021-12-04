@@ -101,7 +101,6 @@ const Home: NextPage = () => {
                 knowledge.
               </p>
               <div className={techStyles.tech_logos}>
-                {/* <SiNextdotjs  size={70} /> */}
                 <div className={techStyles.logo_img_wanim}>
                   <div className={techStyles.hover_point}></div>
                   <div className={techStyles.hover_point}></div>
@@ -174,11 +173,6 @@ const Home: NextPage = () => {
                   <div className={techStyles.hover_point}></div>
                   <div className={techStyles.logo_content}></div>
                 </div>
-                {/* <SiReact size={70} /> */}
-                {/* <SiJavascript size={70} />
-                <SiNodedotjs size={70} />
-                <SiTsnode size={70} />
-                <SiSass size={70} /> */}
               </div>
           </div>
           <div className={techStyles.all_tech}>

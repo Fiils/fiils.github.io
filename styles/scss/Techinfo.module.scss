@@ -24,7 +24,7 @@
         gap: 1.5em;
 
         &:hover {
-            transform: scale(1.15) rotateY(-10px);
+            transform: scale(1.15);
             transition: transform 0.3s;
         }
 
@@ -53,11 +53,12 @@
         
             .logo_content {
                 position: absolute;
+                background: url('https://res.cloudinary.com/media-cloud-dw/image/upload/c_scale,h_70,w_70/v1638647358/Portfolio-Website/Logos/nextdotjs_d6sepv.svg') no-repeat;
+                background-size: cover;
                 top: 0;
                 bottom: 0;
                 left: 0;
                 right: 0;
-                background-size: cover;
                 transition: .5s ease;
                 max-width: 70px !important;
             }
@@ -203,8 +204,3 @@
         to { opacity: 1; tranform: scale(1); }
     }
 }
-
-// .logo_anim:hover {
-//     margin-top: -30px;
-//     animation: upped-persp 1s;
-// }
