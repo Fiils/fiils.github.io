@@ -8,17 +8,21 @@
     width: 80%;
     margin: auto;
     margin-top: 60px;
-    background-color: #17f9f2;
-    background-image: linear-gradient(315deg, #17f9f2 0%, #b0f9a9 74%);
     background-color: #29e7cd;
-background-image: linear-gradient(315deg, #29e7cd 0%, #fffbfc 74%);
+    background-image: linear-gradient(315deg, #29e7cd 0%, #fffbfc 74%);
 
     box-shadow: 10px 10px 20px rgb(200, 200, 200);
+
+    @keyframes text-opac {
+        from { opacity: 0 }
+        to { opacity: 1 }
+    }
 
     p {
         font-size: 1.1em;
         font-weight: 500;
         width: 35%;
+        animation: text-opac 3.5s;  
     }
 
     .tech_logos {
@@ -129,26 +133,40 @@ background-image: linear-gradient(315deg, #29e7cd 0%, #fffbfc 74%);
 
         }
 
+        @mixin animationsLogos($or1, $or2, $Xdeg, $Ydeg, $n){
+            @keyframes fade-in-tran_#{$n} {
+                from { transform-origin: $or1 $or2; transform: translate($Xdeg, $Ydeg) }
+                to { tranform: translate(0, 0) }
+            }
+            animation: fade-in-tran_#{$n} 1s;
+        }
+
         @for $i from 1 through 6 {
             .logo_img_wanim:nth-child(0n + #{$i}){
                 .logo_content {
                     @if $i == 1 {
                         background: url('https://res.cloudinary.com/media-cloud-dw/image/upload/c_scale,h_70,w_70/v1638647358/Portfolio-Website/Logos/nextdotjs_d6sepv.svg') no-repeat;
+                        @include animationsLogos(top, left, -60px, -60px, $i);
                     }
                     @else if $i == 2 {
                         background: url('https://res.cloudinary.com/media-cloud-dw/image/upload/c_scale,h_70,w_70/v1638647403/Portfolio-Website/Logos/react_shptio.svg') no-repeat;
+                        @include animationsLogos(top, none, 0px, -60px, $i);
                     }
                     @else if $i == 3 {
                         background: url('https://res.cloudinary.com/media-cloud-dw/image/upload/c_scale,h_70,w_70/v1638647413/Portfolio-Website/Logos/javascript_ypmbu8.svg') no-repeat;
+                        @include animationsLogos(top, right, 60px, -60px, $i);
                     }
                     @else if $i == 4 {
                         background: url('https://res.cloudinary.com/media-cloud-dw/image/upload/c_scale,h_70,w_70/v1638647431/Portfolio-Website/Logos/nodedotjs_bcawk2.svg') no-repeat;
+                        @include animationsLogos(bottom, left, -60px, 60px, $i);
                     }
                     @else if $i == 5 {
                         background: url('https://res.cloudinary.com/media-cloud-dw/image/upload/c_scale,h_70,w_70/v1638647441/Portfolio-Website/Logos/typescript_tju3np.svg') no-repeat;
+                        @include animationsLogos(bottom, none, 0px, 60px, $i);
                     }
                     @else if $i == 6 {
                         background: url('https://res.cloudinary.com/media-cloud-dw/image/upload/c_scale,h_70,w_70/v1638647450/Portfolio-Website/Logos/sass_xr3r34.svg') no-repeat;
+                        @include animationsLogos(bottom, right, 60px, 60px, $i);
                     }
                 }
             }
