@@ -16,11 +16,11 @@ const TechList = () => {
                 <li><Link href="https://axios-http.com/docs/intro"><a target="_blank">Axios</a></Link></li>
                 <li><Link href="https://gulpjs.com/"><a target="_blank">Gulp.js</a></Link></li>
                 <li><Link href="https://mongoosejs.com/"><a target="_blank">Mongoose</a></Link></li>
-                <li><Link href="https://expressjs.com/"><a target="_blank">Express.js</a></Link></li>
               </ul>
               <ul>
                 <h3>Frameworks:</h3>
                 <li><Link href="https://nextjs.org/"><a target="_blank">Next.js</a></Link></li>
+                <li><Link href="https://expressjs.com/"><a target="_blank">Express.js</a></Link></li>
               </ul>
               <ul>
                 <h3>Technologies:</h3>

@@ -214,8 +214,8 @@
     }
 
     @for $i from 1 through 5 {
-        @for $j from 1 through 7 {
-            ul:nth-child(0n + #{$i}) {
+        @for $j from 1 through 6 {
+            ul:nth-child(#{$i}) {
                 li:nth-child(0n + #{$j}) {
                     animation: fade-in-list 0.15s * $j * $i;
                 }
