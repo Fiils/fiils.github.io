@@ -46,7 +46,12 @@ const Home: NextPage = () => {
      <div className={styles.more_info_section}>
        <div className={styles.mi_flex_button}>
          <CanvasButtonBKG />
-         <a href="#aboutme"><button className={styles.mi_button} onClick={buttonClicked} onMouseEnter={buttonHovered} onMouseLeave={buttonHovered} type="button" name="more_info" disabled={miButtonClick ? true : false}>About me!</button></a>
+         <a href="#aboutme">
+           <button className={styles.mi_button} onClick={buttonClicked} onMouseEnter={buttonHovered} onMouseLeave={buttonHovered} type="button" name="more_info" disabled={miButtonClick ? true : false}>
+              About me!
+              <div className={styles.charging_effect}></div>
+           </button>
+          </a>
          <style jsx global>{
            `
            html {
@@ -79,6 +84,7 @@ const Home: NextPage = () => {
      {miButtonClick && 
       <div className={styles.sec_content}>
 
+      <div className={aboutStyles.about_me_full_grad}></div>
         <div className={aboutStyles.about_me}>
           <figure>
             <Image className={aboutStyles.item_am_2_image} src="https://res.cloudinary.com/media-cloud-dw/image/upload/v1638460198/Portfolio-Website/testpp_jijtxr.jpg"
@@ -90,7 +96,7 @@ const Home: NextPage = () => {
           has been to become a better and better web developer. It first started as a hobby, self-teaching myself, and since then, my will
            for learning everything there is about web-related stuff has only been growing. I now mainly”
           </p>
-        </div>
+      </div>
 
         <div className={styles.divider}></div>
 
@@ -153,6 +159,10 @@ const Home: NextPage = () => {
             </div>
           }
         </div>
+
+        <div className={styles.divider} style={{marginTop: '0px'}}></div>
+
+          
 
       </div> 
      }

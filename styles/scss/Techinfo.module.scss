@@ -1,11 +1,19 @@
 .spec_flex {
-    display: inline-flex;
+    display: flex;
     flex-flow: row nowrap;
     align-items: center;
     font-size: 1.2em;
     justify-content: center;
-    margin-top: 20px;
     gap: 10rem;
+    width: 80%;
+    margin: auto;
+    margin-top: 60px;
+    background-color: #17f9f2;
+    background-image: linear-gradient(315deg, #17f9f2 0%, #b0f9a9 74%);
+    background-color: #29e7cd;
+background-image: linear-gradient(315deg, #29e7cd 0%, #fffbfc 74%);
+
+    box-shadow: 10px 10px 20px rgb(200, 200, 200);
 
     p {
         font-size: 1.1em;
@@ -22,11 +30,6 @@
         grid-template-columns: repeat(3, minmax(0, 2fr));
         grid-template-rows: repeat(2, 1fr);
         gap: 1.5em;
-
-        // &:hover {
-        //     transform: scale(1.15);
-        //     transition: transform 0.3s;
-        // }
 
         @keyframes upped-persp {
             from { top: 0 }
@@ -55,7 +58,6 @@
         
             .logo_content {
                 position: absolute;
-                background: url('https://res.cloudinary.com/media-cloud-dw/image/upload/c_scale,h_70,w_70/v1638647358/Portfolio-Website/Logos/nextdotjs_d6sepv.svg') no-repeat;
                 background-size: cover;
                 top: 0;
                 bottom: 0;
@@ -124,6 +126,7 @@
                     }
                 }
             }
+
         }
 
         @for $i from 1 through 6 {
@@ -150,12 +153,13 @@
                 }
             }
         }
-        
+
     }
 }
 
 .all_tech {
     margin-left: calc(50vw - 15px);
+    margin-top: 30px;
 
     button {
         border: none;
