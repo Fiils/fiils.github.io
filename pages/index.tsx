@@ -4,8 +4,8 @@ import dynamic from 'next/dynamic'
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { SiNextdotjs, SiReact, SiJavascript, SiNodedotjs, SiTsnode, SiSass } from 'react-icons/si'
 import { RiArrowDownSLine } from 'react-icons/ri'
+import Logo from '../components/Logo'
 import styles from '../styles/scss/Home.module.scss'
 import aboutStyles from '../styles/scss/Aboutme.module.scss'
 import techStyles from '../styles/scss/Techinfo.module.scss'
@@ -101,78 +101,12 @@ const Home: NextPage = () => {
                 knowledge.
               </p>
               <div className={techStyles.tech_logos}>
-                <div className={techStyles.logo_img_wanim}>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.logo_content}></div>
-                </div>
-                <div className={techStyles.logo_img_wanim}>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.logo_content}></div>
-                </div>
-                <div className={techStyles.logo_img_wanim}>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.logo_content}></div>
-                </div>
-                <div className={techStyles.logo_img_wanim}>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.logo_content}></div>
-                </div>
-                <div className={techStyles.logo_img_wanim}>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.logo_content}></div>
-                </div>
-                <div className={techStyles.logo_img_wanim}>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.hover_point}></div>
-                  <div className={techStyles.logo_content}></div>
-                </div>
+                <Logo />
+                <Logo />
+                <Logo />
+                <Logo />
+                <Logo />
+                <Logo />
               </div>
           </div>
           <div className={techStyles.all_tech}>

@@ -23,22 +23,24 @@
         grid-template-rows: repeat(2, 1fr);
         gap: 1.5em;
 
-        &:hover {
-            transform: scale(1.15);
-            transition: transform 0.3s;
-        }
+        // &:hover {
+        //     transform: scale(1.15);
+        //     transition: transform 0.3s;
+        // }
 
         @keyframes upped-persp {
             from { top: 0 }
-            to { top: -30px }
+            to { top: -10px }
         }
         
         .logo_img_wanim {
             position: relative;
-            max-width: 70px;
+            width: 70px;
+            height: 70px;
+            transition: all 1s ease;
             
             &:hover{ 
-                top: -30px;
+                top: -10px;
                 transform: scale(1.15);
                 transition: transform 1s;
                 animation: upped-persp 1s;
@@ -60,7 +62,6 @@
                 left: 0;
                 right: 0;
                 transition: .5s ease;
-                max-width: 70px !important;
             }
 
             @for $i from 1 through 9 {
@@ -149,6 +150,7 @@
                 }
             }
         }
+        
     }
 }
 
