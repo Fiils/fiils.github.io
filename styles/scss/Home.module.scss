@@ -2,7 +2,7 @@
     position: relative;
     background: url('https://res.cloudinary.com/media-cloud-dw/image/upload/v1638560298/Portfolio-Website/MainParallaxBackgroundLower_qhxg10.png') no-repeat;
     background-size: cover;
-    background-position: top;
+    background-position: center;
     background-attachment: fixed;
     height: 90vh;
     width: 100%;
@@ -90,15 +90,15 @@
     top: 20px;  
 }
 
-  //Phone Portrait & Landscape
-  @media screen and (min-width: 320px) and (max-width: 480px) {
-
-}
-
 //Phone Portrait
 @media screen and (min-width: 320px) and (max-width: 480px) {
     .image {
         width: 100vmax;
+        height: 60vh;
+        background: url('https://res.cloudinary.com/media-cloud-dw/image/upload/v1638811926/Portfolio-Website/BGs/bg6_xm4fug.png') no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
     }
 
     .divider {

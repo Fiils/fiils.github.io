@@ -19,7 +19,7 @@ const TechInfo: React.FC = () => {
     return (
         <div>
           <div className={styles.spec_flex}>
-              <p ref={ref} className={inView ? styles.text_tech : styles.vis_none}>Over the course of many years I've managed to learn a vast variety of programming languages, libraries and technologies, covering both frotend
+              <p ref={ref} className={inView ? styles.text_tech : styles.vis_none}>Over the course of many years I&quot;ve managed to learn a vast variety of programming languages, libraries and technologies, covering both frotend
                 and backend developments. This way I was able to understand the logic of a website, while gathering a lot of technical
                 knowledge.
               </p>
