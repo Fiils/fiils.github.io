@@ -64,8 +64,6 @@
         font-family: sans-serif;
         cursor: pointer;
         margin-top: calc(15vh - 2em);
-        // background-color: #b8c6db;
-        // background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
         background-color: #e3efe8;
         background-image: linear-gradient(315deg, #e3efe8 0%, #96a7cf 74%);
 
@@ -90,4 +88,50 @@
 .sec_content {
     position: relative;
     top: 20px;  
+}
+
+  //Phone Portrait & Landscape
+  @media screen and (min-width: 320px) and (max-width: 480px) {
+
+}
+
+//Phone Portrait
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .image {
+        width: 100vmax;
+    }
+
+    .divider {
+        width: 100vmax;
+    }
+}
+
+//Phone Landscape
+@media screen and (max-width: 480px) {
+  
+}
+
+//Tablet Portrait & Landscape
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  
+}
+
+//Tablet Portrait
+@media screen and (min-width: 768px) {
+  
+}
+
+//Tablet Landscape
+@media screen and (max-width: 1024px) {
+  
+}
+
+//Desktop
+@media screen and (min-width: 1224px) {
+  
+}
+
+//Large Desktop
+@media screen and (min-width: 1824px) {
+  
 }
