@@ -8,7 +8,7 @@ import { useInView } from 'react-intersection-observer';
 const TechInfo: React.FC = () => {
   const { ref, inView, entry } = useInView({
     triggerOnce: true,
-    threshold: 0.3,
+    threshold: 0.7,
   });
 
   const[ allTech, setAllTech ] = useState(false);
@@ -33,14 +33,14 @@ const TechInfo: React.FC = () => {
               </div>
           </div>
           <div className={styles.all_tech}>
-              <a href="#knd">
+              <a>
                 <button onClick={allTechnologiesClick}>
-                  {!allTech ? <RiArrowDownSLine size={30}/> : <RiArrowUpSLine size={30} />}
+                  {!allTech ? <RiArrowUpSLine size={30} /> : <RiArrowDownSLine size={30}/> }
                 </button>
               </a>
           </div>
           {allTech && 
-            <div id="knd" className={`${styles.list_all_tech}`}>
+            <div className={`${styles.list_all_tech}`}>
               <TechList />
             </div>
           }
