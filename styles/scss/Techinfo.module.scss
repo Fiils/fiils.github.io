@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+
 .spec_flex {
     visibility: visible;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     font-size: 1.2em;
+    font-family: 'Signika', sans-serif;
     justify-content: center;
     gap: 10rem;
     width: 80%;
@@ -136,8 +140,9 @@
 
         @mixin animationsLogos($or1, $or2, $Xdeg, $Ydeg, $n){
             @keyframes fade-in-tran_#{$n} {
-                from { transform-origin: $or1 $or2; transform: translate($Xdeg, $Ydeg) }
-                to { tranform: translate(0, 0) }
+                0% { transform-origin: $or1 $or2; transform: translate($Xdeg, $Ydeg); opacity: 0 }
+                45% { opacity: 1 }
+                100% { tranform: translate(0, 0) }
             }
             animation: fade-in-tran_#{$n} 1s;
         }
@@ -188,6 +193,7 @@
 }
 
 .list_all_tech {
+    font-family: 'Signika', sans-serif;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -207,6 +213,7 @@
 
     li {
         text-indent: 10px;
+        font-family: 'Nova Mono', monospace;
     }
 
     li:hover {

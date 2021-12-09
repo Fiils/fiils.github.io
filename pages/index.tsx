@@ -1,10 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import Aboutme from '../components/Aboutme'
 import TechInfo from '../components/Tech/TechInfo'
+import PDetails from '../components/PDetails'
 import styles from '../styles/scss/Home.module.scss'
 
 const CanvasButtonBKG = dynamic(() => import('../components/CanvasButtonBKG'), { ssr: false })
@@ -83,6 +84,8 @@ const Home: NextPage = () => {
       <TechInfo />
 
         <div className={styles.divider} style={{marginTop: '0px'}}></div>
+
+      <PDetails />
 
 
 

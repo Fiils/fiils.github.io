@@ -2,7 +2,7 @@
     position: relative;
     background: url('https://res.cloudinary.com/media-cloud-dw/image/upload/v1638560298/Portfolio-Website/MainParallaxBackgroundLower_qhxg10.png') no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-attachment: fixed;
     height: 90vh;
     width: 100%;
@@ -43,6 +43,7 @@
     width: 100%;
     background-color: white;
     height: 10vh;
+    background-size: cover;
 }
 
 .more_info_section {

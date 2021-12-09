@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+
 .about_me {
     visibility: visible;
     position: relative;
     margin: auto;   
     margin-top: 50px;
     margin-bottom: 50px;
+    font-family: 'Signika', sans-serif;
     width: 80%;
     display: flex;
     flex-flow: row nowrap;
