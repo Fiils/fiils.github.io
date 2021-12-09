@@ -26,7 +26,7 @@ jobs:
       - name: Install packages
         run: npm ci
       - name: Build project
-        run: npm run build
+        run: npm run set
       - name: Export static files
         run: npm run export
       - name: Add .nojekyll file
@@ -34,5 +34,5 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
-          branch: gh-pages
+          branch: site
           folder: out
